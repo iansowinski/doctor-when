@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Affix, Menu, Icon } from 'antd';
 
 export default class Navigation extends React.Component {
@@ -20,10 +21,14 @@ export default class Navigation extends React.Component {
           mode="horizontal"
         >
           <Menu.Item key="mail">
-            <Icon type="pushpin-o" />Projects
+            <Link to="/">
+              <Icon type="pushpin-o" />Projects
+            </Link>
           </Menu.Item>
           <Menu.Item key="app">
-            <Icon type="clock-circle-o" />Current Task
+            <Link to="/test">
+              <Icon type="clock-circle-o" />Current Task
+            </Link>
           </Menu.Item>
         </Menu>
       </Affix>

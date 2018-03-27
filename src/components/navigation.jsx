@@ -26,7 +26,7 @@ export default class Navigation extends React.Component {
             </Link>
           </Menu.Item>
           <Menu.Item key="app">
-            <Link to="/test">
+            <Link to="/current">
               <Icon type="clock-circle-o" />Current Task
             </Link>
           </Menu.Item>

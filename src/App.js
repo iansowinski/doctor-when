@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout, Row, Col } from 'antd';
+import 'antd/dist/antd.css';
+import Navigation from './components/navigation.js';
+const { Footer, Content } = Layout;
 
 class Timer extends Component { 
   constructor(props){
@@ -36,15 +38,17 @@ class Timer extends Component {
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">DOCTOR WHEN</h1>
-        </header>
-        <p>
-         Welcome to doctor when!
-        </p>
-        <Timer/> 
-      </div>
+      <Layout>
+        <Navigation />
+        <Content>
+          <Row>
+            <Col span={24}>
+              <Timer/> 
+            </Col>
+          </Row>
+        </Content>
+        <Footer>Footer</Footer>
+      </Layout>
     );
   }
 }
